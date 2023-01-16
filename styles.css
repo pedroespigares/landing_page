@@ -6,11 +6,16 @@
     --gray-bg: #968D7E;
     --ligth-brown-bg: #948156;
     --dark-brown-bg: #694E33;
+    --anti-flash-white: #F2F3F4;
 }
 
 *::after, *::before, *{
     box-sizing: border-box;
     font-family: 'Dosis', sans-serif;
+}
+
+body{
+    background-color: var(--anti-flash-white)
 }
 
 .bg-light-brown{
@@ -25,10 +30,42 @@
     color: var(--dark-bg) !important;
 }
 
+.text-red{
+    color: var(--red-bg) !important;
+}
+
+.text-brown{
+    color: var(--dark-brown-bg) !important;
+}
+
 li .text-dark:hover{
     color: var(--red-bg) !important;
 }
 
-.fs-card-title{
-    font-size: 5rem;
+span{
+    color: var(--red-bg) !important;
+}
+
+#home{
+    border: none;
+}
+
+#about_us .card{
+    border: none;
+}
+
+.card{
+    background-color: var(--anti-flash-white);
+    border: none;
+}
+
+a.active{
+    background-color: var(--red-bg);
+    color: var(--anti-flash-white) !important;
+    border-radius: 0.5rem
+}
+
+.btn:hover{
+    scale: 1.1;
+    transition: 0.2s;
 }

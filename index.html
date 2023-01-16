@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
-    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/coffee-beans.ico" type="image/png">
     <title>Coffee World</title>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light-brown justify-content-evenly">
+        <nav class="navbar navbar-expand-lg fixed-top bg-light-brown">
             <div class="container-fluid">
               <a class="navbar-brand text-dark brand-title fs-2" href="#">
                 <img src="img/coffee-beans.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
@@ -23,36 +24,176 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link text-dark fs-5" aria-current="page" href="#">Home</a>
+                    <a class="nav-link text-dark fs-5" aria-current="page" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-dark fs-5" href="#">About us</a>
+                    <a class="nav-link text-dark fs-5" href="#about_us">About us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-dark fs-5" href="#">Our experts say</a>
+                    <a class="nav-link text-dark fs-5" href="#experts">Our experts say</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-dark fs-5" href="#">What we offer</a>
+                    <a class="nav-link text-dark fs-5" href="#offer">What we offer</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-dark fs-5" href="#">Contact</a>
+                    <a class="nav-link text-dark fs-5" href="#scrollspyHeading5">Contact</a>
                   </li>
                 </ul>
-                <button class="btn bg-light btn-outline-dark ms-3 me-3 fs-5">Login</button>
-                <button class="btn bg-red text-white btn-outline-dark fs-5">Sign Up</button>
+                <button class="btn bg-light me-3 btn-lg">Login</button>
+                <button class="btn bg-red text-white btn-lg">Sign Up</button>
               </div>
             </div>
           </nav>
     </header>
     <main>
-        <div class="card bg-dark text-white">
+        <div class="card" id="home">
             <img src="img/coffee-bg.jpg" class="card-img firstCard">
-            <div class="card-img-overlay d-flex flex-column align-items-center text-dark">
-              <h5 class="fs-card-title">Live, Love, <span class="text-decoration-underline fst-italic">Coffee</span></h5>
-              <p class="fs-3">Start your day with a hot cup of happiness</p>
-              <button class="btn ">Start your free trial</button> 
+            <div class="card-img-overlay d-flex flex-column align-items-center text-dark gap-5">
+              <h1 class="display-1 mt-5 pt-5">Live, Love, <span class="text-decoration-underline fst-italic">Coffee</span></h5>
+              <p class="fs-3">Start your day with a hot cup of <span>happiness</span></p>
+              <button type="button" class="btn bg-red text-white btn-lg fs-3">Start your free trial</button> 
             </div>
           </div>
+
+
+          <section id="about_us" class="mt-5 d-flex align-items-center flex-column gap-5">
+            <h1 class="display-3 text-center text-red text-uppercase">About Us</h1>
+            <div class="card mb-3" style="max-width: 100%;">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <img src="img/coffee-bag.png" class="img-fluid rounded-start">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h1 class="card-title display-3 text-center text-brown">Coffee World</h1>
+                    <p class="card-text fs-3 mt-5 ms-5">Our main goal since we began has remained basic: acquaint our clients with the domains we specifically purchase our extraordinary-tasting coffee from, broil the beans with consideration, and make astounding coffee increasingly available through our bistros and our site. The coffee we cook is the coffee we like to drink, and we trust you like it as well.
+
+                      At Coffee World Roasters, we pursue a straightforward arrangement of convictions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="experts" class="mt-5">
+            <h1 class="display-3 text-center text-red text-uppercase">Our experts say</h1>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner mt-5">
+                <div class="carousel-item active">
+                  <img src="img/1.jpg" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-4 text-dark">Neon Software Development Team</h1>
+                    <p class="fs-3 text-dark">Coffee is part of our daily lives, so we are always looking for the highest quality beans. That's why we go to Coffee World</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/2.jpg" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-4">Royal Coffee Shop</h1>
+                    <p class="fs-3">In our coffee shop we make sure to provide our customers with the best coffee possible, and that can only be found in Coffee Shop.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/3.jpg" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="display-4">Daniel</h1>
+                    <p class="fs-3">Family time is one of the most important parts of life, especially if it is accompanied by a coffee from Coffee World.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </section>
+
+          <section id="offer" class="mt-5">
+            <h1 class="display-3 text-center text-red text-uppercase">What we offer</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-5 mt-5">
+              <div class="col">
+                <div class="card">
+                  <img src="img/bolsas/1.jpg" class="card-img-top mb-3">
+                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#morocan" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Show info
+                  </a>
+                  <div class="card-body collapse" id="morocan">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="img/bolsas/2.jpg" class="card-img-top mb-3">
+                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#ethiopia" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Show info
+                  </a>
+                  <div class="card-body collapse" id="ethiopia">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="img/bolsas/3.jpg" class="card-img-top mb-3">
+                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#american" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Show info
+                  </a>
+                  <div class="card-body collapse" id="american">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="img/bolsas/4.jpg" class="card-img-top mb-3">
+                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#new_orleans" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Show info
+                  </a>
+                  <div class="card-body collapse" id="new_orleans">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="img/bolsas/5.jpg" class="card-img-top mb-3">
+                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#viennese" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Show info
+                  </a>
+                  <div class="card-body collapse" id="viennese">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="img/bolsas/6.jpg" class="card-img-top mb-3 ">
+                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#premium" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Show info
+                  </a>
+                  <div class="card-body collapse" id="premium">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
     </main>
 </body>
 </html>
