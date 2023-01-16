@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+:root{
+    --dark-bg: #2A2B2F;
+    --red-bg: #9F372A;
+    --gray-bg: #968D7E;
+    --ligth-brown-bg: #948156;
+    --dark-brown-bg: #694E33;
+}
+
+*::after, *::before, *{
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+.bg-light-brown{
+    background-color: var(--ligth-brown-bg) !important; 
+}
+
+.bg-red{
+    background-color: var(--red-bg) !important;
+}
+
+.text-dark{
+    color: var(--dark-bg) !important;
+}
+
+li .text-dark:hover{
+    color: var(--red-bg) !important;
+}
+
+.fs-card-title{
+    font-size: 5rem;
+}
