@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Ruda:wght@400;700&display=swap');
+@font-face {
+    font-family: quesha;
+    src: url(fonts/Quesha.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+}
 
 :root{
+    box-sizing: border-box;
+    line-height: 1.8;
+
     --dark-bg: #2A2B2F;
     --red-bg: #9F372A;
     --gray-bg: #968D7E;
@@ -8,17 +21,11 @@
     --dark-brown-bg: #694E33;
     --anti-flash-white: #F2F3F4;
     --title-font: 'Ruda', sans-serif;
-    --text-font: 'Roboto Slab', serif;;
+    --text-font: 'Roboto Slab', serif;
+    --logo-font: quesha;
 }
 
-*::after, *::before, *{
-    box-sizing: border-box;
-    font-family: 'Dosis', sans-serif;
-}
-
-body{
-    background-color: var(--anti-flash-white)
-}
+/* Cambio de colores */
 
 .bg-light-brown{
     background-color: var(--ligth-brown-bg) !important; 
@@ -48,16 +55,10 @@ body{
     font-family: var(--text-font);
 }
 
+/* ---------------------------------------------- */
+
 button, a, h1, h2{
     font-family: var(--title-font) !important;
-}
-
-button:active, button:focus, a:active, a:focus{
-    outline: none;
-}
-
-p, span, label{
-    font-family: var(--text-font) !important;
 }
 
 li .text-dark:hover, a[class~="navbar-brand"]:hover, a[class~=text-muted]:hover{
@@ -65,23 +66,14 @@ li .text-dark:hover, a[class~="navbar-brand"]:hover, a[class~=text-muted]:hover{
     transition: 0.3s;
 }
 
-span{
-    color: var(--red-bg) !important;
+a:active, a:focus{
+    outline: none;
 }
 
-#home, #about_us, .card{
-    border: none;
-}
-
-.card{
-    background-color: var(--anti-flash-white);
-    border: none;
-}
-
-a.active{
-    background-color: var(--red-bg);
-    color: var(--anti-flash-white) !important;
-    border-radius: 0.5rem
+a[class~="navbar-brand"]{
+    font-family: var(--logo-font) !important;
+    font-size: 3.5rem !important;
+    font-weight: 500;
 }
 
 .btn:hover{
@@ -89,6 +81,48 @@ a.active{
     transition: 0.2s;
 }
 
-.fixed-top{
-    z-index: 1999;
+.btn:active,
+.btn:hover,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: var(--red-bg);
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+} 
+
+p, span, label{
+    font-family: var(--text-font) !important;
+}
+
+#home, #about_us, .card{
+    border: none;
+}
+
+body, .card{
+    background-color: var(--anti-flash-white);
+    border: none;
+}
+
+
+a.active{
+    color: var(--red-bg) !important;
+    background-color: var(--ligth-brown-bg) !important;
+}
+
+.btn:hover{
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+/* Limite de tamaño de las imagenes del carrousel */
+.carousel .carousel-item {
+    max-height:550px;
+}
+
+.carousel-item img {
+    object-fit:cover;
+    max-height:550px;
 }
