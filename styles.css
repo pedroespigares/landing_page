@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Ruda:wght@400;700&display=swap');
 
 :root{
     --dark-bg: #2A2B2F;
@@ -7,6 +7,8 @@
     --ligth-brown-bg: #948156;
     --dark-brown-bg: #694E33;
     --anti-flash-white: #F2F3F4;
+    --title-font: 'Ruda', sans-serif;
+    --text-font: 'Roboto Slab', serif;;
 }
 
 *::after, *::before, *{
@@ -26,6 +28,10 @@ body{
     background-color: var(--red-bg) !important;
 }
 
+.bg-dark-brown{
+    background-color: var(--dark-brown-bg) !important;
+}
+
 .text-dark{
     color: var(--dark-bg) !important;
 }
@@ -38,19 +44,32 @@ body{
     color: var(--dark-brown-bg) !important;
 }
 
-li .text-dark:hover{
+.text-font{
+    font-family: var(--text-font);
+}
+
+button, a, h1, h2{
+    font-family: var(--title-font) !important;
+}
+
+button:active, button:focus, a:active, a:focus{
+    outline: none;
+}
+
+p, span, label{
+    font-family: var(--text-font) !important;
+}
+
+li .text-dark:hover, a[class~="navbar-brand"]:hover, a[class~=text-muted]:hover{
     color: var(--red-bg) !important;
+    transition: 0.3s;
 }
 
 span{
     color: var(--red-bg) !important;
 }
 
-#home{
-    border: none;
-}
-
-#about_us .card{
+#home, #about_us, .card{
     border: none;
 }
 

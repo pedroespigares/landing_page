@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/coffee-beans.ico" type="image/png">
     <title>Coffee World</title>
@@ -15,14 +15,14 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light-brown">
         <div class="container-fluid">
-          <a class="navbar-brand fs-2" href="#home">
+          <a class="navbar-brand fs-1 text-uppercase title-font" href="#home">
             <img src="img/coffee-beans.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
             Coffee World</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0 fs-3 gap-5 flex-grow-1 justify-content-center">
+            <ul class="navbar-nav mb-2 mb-lg-0 fs-3 gap-4 flex-grow-1 justify-content-center">
               <li class="nav-item text-dark">
                 <a class="nav-link text-dark" aria-current="page" href="#home">Home</a>
               </li>
@@ -36,7 +36,7 @@
                 <a class="nav-link text-dark" href="#offer">What we offer</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Contact Us</a>
+                <a class="nav-link text-dark" href="#contact">Contact Us</a>
               </li>
             </ul>
             <div class="d-flex gap-3">
@@ -136,12 +136,12 @@
         <div class="card" id="home">
             <img src="img/coffee-bg.jpg" class="card-img firstCard w-100">
             <div class="card-img-overlay d-flex flex-column align-items-center text-dark gap-5">
-              <h1 class="display-1 mt-5 pt-5">Live, Love, <span class="text-decoration-underline fst-italic">Coffee</span></h5>
-              <p class="fs-3">Start your day with a hot cup of <span>happiness</span></p>
+              <h1 class="display-1 mt-5 pt-5 fst-italic">Live, Love, <span class="bg-red text-white fst-normal rounded-pill ps-3 pe-3">Coffee</span></h5>
+              <p class="fs-3">Start your day with a hot cup of <span class="text-decoration-underline">happiness</span></p>
 
               <!-- MODAL PARA START YOUR FREE TRIAL -->
               <div>
-                <button type="button" class="btn bg-red text-white btn-lg fs-3" data-bs-toggle="modal" data-bs-target="#signUpModal">
+                <button type="button" class="btn bg-red text-white btn-lg fs-3 title-font" data-bs-toggle="modal" data-bs-target="#signUpModal">
                   Start your free trial
                 </button>
                 <div class="modal fade" id="signUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
@@ -210,11 +210,11 @@
 
           <section id="experts" class="mt-5">
             <h1 class="display-3 text-center text-red text-uppercase">Our experts say</h1>
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
               <div class="carousel-inner mt-5">
                 <div class="carousel-item active">
@@ -239,94 +239,289 @@
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
           </section>
 
-          <section id="offer" class="mt-5">
+          <!-- El Show info serán modales -->
+
+
+          <section id="offer" class="mt-5 pt-5">
             <h1 class="display-3 text-center text-red text-uppercase">What we offer</h1>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-5 mt-5">
-              <div class="col">
-                <div class="card">
-                  <img src="img/bolsas/1.jpg" class="card-img-top mb-3">
-                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#morocan" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Show info
-                  </a>
-                  <div class="card-body collapse" id="morocan">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="container">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 mt-5">
+
+                <!-- Card y modal morocan -->
+
+                <article class="col">
+                  <div class="card">
+                    <img src="img/bolsas/1.jpg" class="card-img-top mb-3">
+                    <button type="button" class="btn bg-red text-white fs-3" data-bs-toggle="modal" data-bs-target="#morocan">
+                      Show info
+                    </button>
+                    
+                    <div class="modal fade" id="morocan" tabindex="-1" aria-labelledby="morocanLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h2 class="modal-title display-5 card-title text-center text-brown text-uppercase" id="morocanLabel">Morocan</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p class="card-text fs-5">Moroccan coffee is a unique blend of spices and coffee beans, traditionally served in small cups with a ceremonial pouring ritual. 
+                              The coffee is brewed with cinnamon, cardamom and sometimes saffron, giving it a distinct and aromatic flavor. It's often served with dates or pastries as a treat. It's an important part of Moroccan culture and hospitality.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn bg-red text-white fs-3" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="img/bolsas/2.jpg" class="card-img-top mb-3">
-                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#ethiopia" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Show info
-                  </a>
-                  <div class="card-body collapse" id="ethiopia">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="img/bolsas/3.jpg" class="card-img-top mb-3">
-                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#american" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Show info
-                  </a>
-                  <div class="card-body collapse" id="american">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="img/bolsas/4.jpg" class="card-img-top mb-3">
-                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#new_orleans" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Show info
-                  </a>
-                  <div class="card-body collapse" id="new_orleans">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="img/bolsas/5.jpg" class="card-img-top mb-3">
-                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#viennese" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Show info
-                  </a>
-                  <div class="card-body collapse" id="viennese">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="img/bolsas/6.jpg" class="card-img-top mb-3 ">
-                  <a class="btn bg-red text-white fs-3" data-bs-toggle="collapse" href="#premium" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Show info
-                  </a>
-                  <div class="card-body collapse" id="premium">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
+                </article>
+                
+
+
+                <!-- Card y modal de ethiopia -->
+
+                  <article class="col">
+                    <div class="card">
+                      <img src="img/bolsas/2.jpg" class="card-img-top mb-3">
+                      <button type="button" class="btn bg-red text-white fs-3" data-bs-toggle="modal" data-bs-target="#ethiopia">
+                        Show info
+                      </button>
+                      
+                      <div class="modal fade" id="ethiopia" tabindex="-1" aria-labelledby="ethiopiaLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h2 class="modal-title display-5 card-title text-brown text-uppercase" id="ethiopiaLabel">Ethiopia</h2>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p class="card-text fs-5">Ethiopian coffee is known for its complex and nuanced flavors, with notes of fruit, spice, and chocolate. It's often considered the birthplace of coffee and is grown on small family-owned farms using traditional 
+                                methods. The coffee is typically sun-dried and hand-sorted before being exported. Ethiopian coffee is enjoyed in traditional ceremonies and is a symbol of pride and cultural identity for the country. It's one of the most sought-after and respected coffee varieties in the world.</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn bg-red text-white fs-3" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+
+                  <!-- Card y modal de american -->
+                  
+                
+                    <article class="col">
+                      <div class="card">
+                        <img src="img/bolsas/3.jpg" class="card-img-top mb-3">
+                        <button type="button" class="btn bg-red text-white fs-3" data-bs-toggle="modal" data-bs-target="#american">
+                          Show info
+                        </button>
+                        
+                        <div class="modal fade" id="american" tabindex="-1" aria-labelledby="americanLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title display-5 card-title text-brown text-uppercase" id="americanLabel">American</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body fs-5">
+                                <p class="card-text">American coffee is typically a blend of coffee beans from different regions, resulting in a mild and balanced flavor. It is often brewed with cream and sugar, making it a sweet and easy to drink. American coffee culture is known for its convenience and fast-paced lifestyle, 
+                                  with drive-thru coffee shops and quick to-go options. It is also a staple in American diners and restaurants, where it is often served in large mugs. American coffee is a cultural icon, often associated with productivity and energy.</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn bg-red text-white fs-3" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <!-- Card y modal de New Orleans -->
+                  
+
+                    <article class="col">
+                      <div class="card">
+                        <img src="img/bolsas/4.jpg" class="card-img-top mb-3">
+                        <button type="button" class="btn bg-red text-white fs-3" data-bs-toggle="modal" data-bs-target="#neworleans">
+                          Show info
+                        </button>
+                        
+                        <div class="modal fade" id="neworleans" tabindex="-1" aria-labelledby="neworleansLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title display-5 card-title text-brown text-uppercase" id="neworleansLabel">New Orleans</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="card-text fs-5"> American New Orleans coffee is known for its strong flavor and robust body. It is prepared with hot water and 
+                                  generous spoonfuls of ground coffee. It is often served with a pinch of sugar and milk or cream to balance the flavor. It is a popular drink among locals and tourists visiting the city.</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn bg-red text-white fs-3" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+
+                    <!-- Card y modal de viennese -->
+
+                    <article class="col">
+                      <div class="card">
+                        <img src="img/bolsas/5.jpg" class="card-img-top mb-3">
+                        <button type="button" class="btn bg-red text-white fs-3" data-bs-toggle="modal" data-bs-target="#viennese">
+                          Show info
+                        </button>
+                        
+                        <div class="modal fade" id="viennese" tabindex="-1" aria-labelledby="vienneseLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title display-5 card-title text-brown text-uppercase" id="vienneseLabel">Viennese</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="card-text fs-5"> Vietnamese coffee is a unique blend of dark roast coffee beans and sweetened condensed milk. It is 
+                                  traditionally brewed through a small metal phin filter, which creates a strong and bold flavor. It is often served over ice, 
+                                  making it a perfect drink for hot weather. Vietnamese coffee is a staple in the country's cafes and street vendors and is also gaining popularity in other parts of the world.</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn bg-red text-white fs-3" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <!-- Card y modal de premium -->
+
+                    <article class="col">
+                      <div class="card">
+                        <img src="img/bolsas/6.jpg" class="card-img-top mb-3">
+                        <button type="button" class="btn bg-red text-white fs-3" data-bs-toggle="modal" data-bs-target="#premium">
+                          Show info
+                        </button>
+                        
+                        <div class="modal fade" id="premium" tabindex="-1" aria-labelledby="premiumLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title display-5 card-title text-brown text-uppercase" id="premiumLabel">Premium</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <p class="card-text fs-5"> Premium coffee is known for its unique, high-quality beans and unique flavors. These beans are often 
+                                  carefully sourced from specific regions and are grown under specific conditions to ensure optimal flavor. The beans are usually roasted to 
+                                  perfection, producing a rich and smooth taste. Premium coffee is often enjoyed by coffee connoisseurs and those who appreciate the art of coffee making. 
+                                  It can be brewed in different ways, like pour over, chemex, french press, and many more.</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn bg-red text-white fs-3" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
               </div>
             </div>
           </section>
+
+
+          <section id="contact">
+            <h1 class="display-3 text-center text-red text-uppercase mt-5 pt-5">Contact Us</h1>
+            <div class="container py-4">
+
+              <form id="contactForm">
+            
+                <div class="mb-3">
+                  <label class="form-label" for="name">Name</label>
+                  <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                  <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                </div>
+            
+
+                <div class="mb-3">
+                  <label class="form-label" for="emailAddress">Email Address</label>
+                  <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+                  <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                  <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                </div>
+            
+
+                <div class="mb-3">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                  <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                </div>
+
+                <div class="d-grid">
+                  <button class="btn bg-red text-white fs-3" id="submitButton" type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+          </section>
     </main>
+
+    <div class="container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+          <a href="#home" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="img/coffee-beans.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
+          </a>
+          <p class="text-muted">&copy; 2023</p>
+        </div>
+    
+        <div class="col mb-3">
+    
+        </div>
+    
+        <div class="col mb-3">
+          <h5 class="fs-3 text-red">Help</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shipment</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Returns</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5 class="fs-3 text-red">About Us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Who we are</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Work with us</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privaty policy</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms and conditions</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5 class="fs-3 text-red">Legal</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cookies policy</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privaty policy</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms and conditions</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
 </body>
 </html>
