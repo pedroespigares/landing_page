@@ -19,7 +19,8 @@
     --gray-bg: #968D7E;
     --ligth-brown-bg: #948156;
     --dark-brown-bg: #694E33;
-    --anti-flash-white: #F2F3F4;
+    /* El antiflash es para evitar la cegera que causa el blanco puro */
+    --anti-flash-white: #F2F3F4; 
     --title-font: 'Ruda', sans-serif;
     --text-font: 'Roboto Slab', serif;
     --logo-font: quesha;
@@ -57,8 +58,11 @@
 
 /* ---------------------------------------------- */
 
+/* Estilos de botones y enlaces */
+
 button, a, h1, h2{
     font-family: var(--title-font) !important;
+    font-weight: 600;
 }
 
 li .text-dark:hover, a[class~="navbar-brand"]:hover, a[class~=text-muted]:hover{
@@ -72,8 +76,13 @@ a:active, a:focus{
 
 a[class~="navbar-brand"]{
     font-family: var(--logo-font) !important;
-    font-size: 3.5rem !important;
+    font-size: calc(2vw + 1.5rem) !important;
     font-weight: 500;
+}
+
+a.active{
+    color: var(--red-bg) !important;
+    background-color: var(--ligth-brown-bg) !important;
 }
 
 .btn:hover{
@@ -87,6 +96,14 @@ a[class~="navbar-brand"]{
     outline: none;
     box-shadow: none;
 }
+
+.btn:hover{
+    scale: 1.1;
+    transition: 0.2s;
+}
+/* ---------------------------------------------- */
+
+/* Estilos de inputs y contenido */
 
 .form-control:focus {
     border-color: var(--red-bg);
@@ -106,16 +123,11 @@ body, .card{
     border: none;
 }
 
+ .display-1{
+    font-size: 7rem;
+ }
 
-a.active{
-    color: var(--red-bg) !important;
-    background-color: var(--ligth-brown-bg) !important;
-}
-
-.btn:hover{
-    scale: 1.1;
-    transition: 0.2s;
-}
+/* ---------------------------------------------- */
 
 /* Limite de tamaño de las imagenes del carrousel */
 .carousel .carousel-item {
@@ -125,4 +137,33 @@ a.active{
 .carousel-item img {
     object-fit:cover;
     max-height:550px;
+}
+
+/* ---------------------------------------------- */
+
+/* Estilos validacion de formulario */
+
+.form-control:valid {
+    border-color: #90EE90;
+}
+
+.form-control:valid:focus {
+    border-color: #90EE90;
+    box-shadow: 0 0 0 0.2rem rgba(144, 238, 144, 0.25);
+}
+
+.form-control:invalid {
+    border-color: var(--red-bg);
+}
+
+.form-control:invalid:focus {
+    border-color: var(--red-bg);
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
+/* ---------------------------------------------- */
+/* Estilos para el video */
+video{
+    max-height: 100vh; 
+    object-fit: cover;
 }
