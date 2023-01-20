@@ -63,10 +63,12 @@
 button, a, h1, h2{
     font-family: var(--title-font) !important;
     font-weight: 600;
+    transition: 0.3s !important;
 }
 
 li .text-dark:hover, a[class~="navbar-brand"]:hover, a[class~=text-muted]:hover{
     color: var(--red-bg) !important;
+    scale: 1.2;
     transition: 0.3s;
 }
 
@@ -80,13 +82,18 @@ a[class~="navbar-brand"]{
     font-weight: 500;
 }
 
+a[class~="navbar-brand"]:hover{
+    scale: 1 !important;
+}
+
 a.active{
     color: var(--red-bg) !important;
+    scale: 1.2;
     background-color: var(--ligth-brown-bg) !important;
 }
 
 .btn:hover{
-    scale: 1.1;
+    scale: 1.1 !important;
     transition: 0.2s;
 }
 
@@ -124,9 +131,18 @@ body, .card{
 }
 
  .display-1{
-    font-size: 7rem;
+    font-size: 7vw !important;
+    text-align: center;
  }
 
+ h1[class~="display-1"] ~ p{
+    text-align: center;
+    font-size: 2vw;
+ }
+
+ button#trial{
+    font-size: 2vw !important;
+ }
 /* ---------------------------------------------- */
 
 /* Limite de tamaño de las imagenes del carrousel */

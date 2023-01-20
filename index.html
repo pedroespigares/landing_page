@@ -23,8 +23,8 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav nav-pills mb-2 mb-lg-0 fs-3 mx-auto gap-4 justify-content-center">
+      <div class="collapse navbar-collapse gap-5" id="navbarSupportedContent">
+        <ul class="nav nav-pills mb-2 mb-lg-0 fs-3 ms-auto gap-4">
           <li class="nav-item text-dark">
             <a class="nav-link text-dark" aria-current="page" href="#home">Home</a>
           </li>
@@ -75,21 +75,21 @@
 
 <body class="position-relative" data-bs-spy="scroll" data-bs-target="#navprincipal" class="scrollspy-example" data-bs-offset="0" tabindex="0">
     <main>
-        <div class="card" id="home">
-            <video src="img/videos/video.mp4" autoplay muted loop class="opacity-75"></video>
-            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-white gap-5">
+        <section class="card" id="home">
+            <video src="img/videos/video.mp4" autoplay muted loop></video>
+            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center text-white gap-sm-5">
               <h1 class="display-1 mt-5 pt-5 fst-italic">Live, Love, <span class="bg-red text-white fst-normal rounded-pill ps-3 pe-3">Coffee</span></h1>
-              <p class="fs-3">Start your day with a hot cup of <span class="text-decoration-underline">happiness</span></p>
+              <p>Start your day with a hot cup of <span class="text-decoration-underline">happiness</span></p>
 
               <!-- MODAL PARA START YOUR FREE TRIAL -->
               <div>
-                <button type="button" class="btn bg-red text-white btn-lg fs-3 title-font" data-bs-toggle="modal" data-bs-target="#signUpModal">
+                <button id="trial" type="button" class="btn bg-red text-white btn-lg fs-1 title-font" data-bs-toggle="modal" data-bs-target="#signUpModal">
                   Start your free trial
                   <img src="img/coffee-cups.png" alt="" width="50" height="44">
                 </button>
             </div>
             </div>
-          </div>
+          </section>
 
 <!-- ----------------------------------------------------------------------------------------- -->
 <!-- ABOUT US -->
@@ -103,7 +103,7 @@
                 <div class="col-md-6">
                   <div class="card-body">
                     <h1 class="card-title display-3 text-center text-brown">Coffee World</h1>
-                    <p class="card-text fs-3 mt-5 ms-5" style="text-align: justify;">Our main goal since we began has remained basic: acquaint our clients with the domains we specifically purchase our extraordinary-tasting coffee from, broil the beans with consideration, and make astounding coffee increasingly available through our bistros and our site. The coffee we cook is the coffee we like to drink, and we trust you like it as well.
+                    <p class="card-text fs-3 mt-5 ms-md-5">Our main goal since we began has remained basic: acquaint our clients with the domains we specifically purchase our extraordinary-tasting coffee from, broil the beans with consideration, and make astounding coffee increasingly available through our bistros and our site. The coffee we cook is the coffee we like to drink, and we trust you like it as well.
 
                       At Coffee World Roasters, we pursue a straightforward arrangement of convictions.</p>
                   </div>
@@ -387,7 +387,7 @@
                   <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" required></textarea>
                 </div>
 
-                <div class="d-flex justify-content-end gap-5">
+                <div class="d-flex flex-column flex-md-row justify-content-end gap-5">
                   <button class="btn bg-red text-white ps-5 pe-5 fs-3" id="submitButton" type="reset">Reset</button>
                   <button class="btn bg-red text-white ps-5 pe-5 fs-3" id="submitButton" type="submit">Submit</button>
                 </div>
@@ -404,7 +404,7 @@
           <a href="#home" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
             <img src="img/coffee-beans.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
           </a>
-          <p class="text-muted">&copy; 2023</p>
+          <p class="text-muted">&copy; 2023 Coffee World</p>
         </div>
     
         <div class="col mb-3">
