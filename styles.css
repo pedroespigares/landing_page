@@ -2,6 +2,7 @@
 @font-face {
     font-family: quesha;
     src: url(fonts/Quesha.ttf);
+    font-display: swap;
 }
 
 *,
@@ -66,6 +67,10 @@ button, a, h1, h2{
     transition: 0.3s !important;
 }
 
+button[class~="navbar-toggler"]{
+    border: none !important;
+}
+
 li .text-dark:hover, a[class~="navbar-brand"]:hover, a[class~=text-muted]:hover{
     color: var(--red-bg) !important;
     scale: 1.2;
@@ -107,6 +112,10 @@ a.active{
 .btn:hover{
     scale: 1.1;
     transition: 0.2s;
+}
+
+div[class~="carousel-caption"]{
+    opacity: 0.8;
 }
 /* ---------------------------------------------- */
 
